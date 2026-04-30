@@ -14,9 +14,9 @@ $font-all: 'Roboto',
 sans-serif;
 // Grid Sizes
 $grid-column: 3.75 * $font-size-base; // 60px
-$grid-gutter: $grid-column / 3; // 20px
-$grid-gutter-split: $grid-gutter / 2; // 10px
-$grid-gutter-full: $grid-column+$grid-gutter; // 80px
+$grid-gutter: calc($grid-column / 3); // 20px
+$grid-gutter-split: calc($grid-gutter / 2); // 10px
+$grid-gutter-full: calc($grid-column + $grid-gutter); // 80px
 $grid-leading: 1.5 * $font-size-base; // 24px
 // Responsive Breakpoints
 $width-small: 400px;
@@ -95,7 +95,7 @@ nav {
     justify-content: center;
     align-items: center;
     margin-top: 0;
-    background-image: url("../img/background.jpg"); 
+    background-image: url("../public/img/background.jpg"); 
     background-size: cover;
 
     #name {
