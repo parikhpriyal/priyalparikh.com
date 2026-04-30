@@ -1,0 +1,174 @@
+@use 'variables' as vars;
+
+// REBOOT
+
+*,
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: vars.$base;
+    font-family: vars.$font-sans-serif;
+    font-size: vars.$text-xl;
+}
+
+ul {
+    list-style: none;
+}
+
+// ELEMENTS
+
+.badge {
+    padding: calc(vars.$base-space / 2) vars.$base-space;
+    background-color: vars.$gray1;
+    border-radius: vars.$rounded-radius;
+    font-size: vars.$base-size;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: calc(vars.$base-size / 2);
+    width: 100%;
+    padding: calc(vars.$base-space * 2);
+    border-radius: vars.$border-radius;
+    background-color: vars.$white;
+}
+
+// BASICS
+
+.serif {
+    font-family: vars.$font-serif;    
+}
+
+.text-md {font-size: vars.$base-size;}
+
+.text-xl { font-size: vars.$text-xl; }
+
+.flex {
+    display: flex;
+}
+
+.row {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.items-center {
+    align-items: center;
+}
+
+@for $i from 1 to vars.$columns {
+    .grid-#{$i} {
+        display: grid;
+        grid-template-columns: repeat($i, 1fr);
+        gap: calc(vars.$base-space * 2);
+    }
+}
+
+@for $i from 1 to vars.$gaps {
+    .gap-#{$i} {
+        gap: calc(vars.$base-space * $i);
+    }
+}
+
+@each $type, $size in vars.$headers {
+    #{$type},
+    .#{$type} {
+        font-size: $size;
+        line-height: 1.1;        
+    }
+}
+
+@each $name, $color in vars.$theme {
+    .bg-#{$name} {
+        background-color: $color;
+    }
+
+    .text-#{$name} {
+        color: $color;
+    }
+}
+
+hr { 
+    display: block;
+    border: 0;
+    border-top: 1px solid #ccc;
+}
+
+// UNIVERSAL SCREEN SIZE
+
+nav {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: calc(vars.$base-space * 2);
+    width: 100vw;
+    height: 60px;
+    padding: 0 calc(vars.$base-space * 4);    
+    background-color: rgba(vars.$base, 0.85);
+    backdrop-filter: blur(10px);
+    z-index: 10;
+    border-bottom: 1px solid vars.$gray1;
+
+    >div {
+        display: flex;
+        align-items: center;
+        gap: vars.$base-space;
+        height: inherit;
+        
+        img {
+            width: auto;
+            height: 100%;
+            padding: vars.$base-space 0;
+        }
+    }
+
+
+    ul{
+        padding: vars.$base-space 0;
+        display: flex;
+        gap: calc(vars.$base-space * 2);
+        align-items: center;
+    }   
+}
+
+main {
+    display: grid;
+    gap: calc(vars.$base-space * 6);
+    padding: calc(vars.$base-space * 4) calc(vars.$base-space * 8);
+}
+
+#home {
+    display: flex;
+    flex-direction: column;
+    @extend .gap-2;   
+}
+
+footer {    
+    a {
+        display: inline-flex;
+        align-items: center;
+        color: vars.$white;
+        text-decoration: none;
+
+        img {
+            width: 24px;
+            height: 24px;
+            aspect-ratio: 1/1;
+        }
+    }
+}

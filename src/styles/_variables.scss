@@ -1,0 +1,66 @@
+// FONTS
+
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap');
+
+// GLOBAL VARIABLES
+
+// Font Details
+$base-size: 16px;
+$text-xl: 20px;
+$font-serif: 'Instrument Serif', serif;
+$font-sans-serif: 'Geist', sans-serif;
+
+$headers: (
+    'h1': clamp(48px, 7vw, 120px),
+    'h2': clamp(38px, 6vw, 76px),
+    'h3': clamp(20px, 5vw, 48px),
+    'h4': 18px,
+    'h5': 16px,
+    'h6': 14px
+);
+
+// Colors
+
+$base: #FFFDF7;
+$black: #000000;
+$gray1: #EFEFEF;
+$white: #FFFFFF;
+$mint: #B6F0D2;
+$pink: #fac3de;
+$butter: #ffe6a2;
+$sky: #a4d7fc;
+$purple: #cac3ff;
+$coral: #ffcec5;
+$tomato: #FF5A3C;
+// $links: rgba(255, 20, 67, 1);
+// $diff-background: #B7B7B7;
+
+$theme: (
+    'base': $base,
+    'black': $black,
+    'gray1': $gray1,
+    'white': $white,
+    'mint': $mint,
+    'pink': $pink,
+    'butter': $butter,
+    'sky': $sky,
+    'coral': $coral,
+    'purple': $purple,
+    'tomato': $tomato,
+);
+
+// Spacing
+
+$base-space: 12px;
+
+$gaps: 5;
+
+// Grid Sizes
+
+$columns: 12;
+
+// Radius
+
+$border-radius: 10px;
+$rounded-radius: 50px;
