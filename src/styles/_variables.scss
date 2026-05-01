@@ -6,7 +6,7 @@
 // GLOBAL VARIABLES
 
 // Font Details
-$base-size: 16px;
+$base-size: 14px;
 $text-xl: 20px;
 $font-serif: 'Instrument Serif', serif;
 $font-sans-serif: 'Geist', sans-serif;
@@ -15,7 +15,7 @@ $headers: (
     'h1': clamp(48px, 7vw, 120px),
     'h2': clamp(38px, 6vw, 76px),
     'h3': clamp(20px, 5vw, 48px),
-    'h4': 18px,
+    'h4': clamp(18px, 5vw, 28px),
     'h5': 16px,
     'h6': 14px
 );
@@ -24,7 +24,8 @@ $headers: (
 
 $bg: #FFFDF7;
 $black: #000000;
-$gray1: #EFEFEF;
+$gray1: #d3d2d2;
+$gray2: #7d7d7d;
 $white: #FFFFFF;
 $mint: #B6F0D2;
 $pink: #fac3de;
@@ -40,6 +41,7 @@ $theme: (
     'bg': $bg,
     'black': $black,
     'gray1': $gray1,
+    'gray2': $gray2,
     'white': $white,
     'mint': $mint,
     'pink': $pink,

@@ -1,1 +1,50 @@
 @use 'variables' as vars;
+@use 'styles' as main;
+@use 'sass:color';
+
+#home {
+    display: flex;
+    flex-direction: column;
+    @extend .gap-2;
+}
+
+#work {
+  .card {
+    &:hover {
+      box-shadow: 0 0 10px vars.$gray1;
+    }
+
+    img {
+      padding: calc(vars.$base-space * 4);
+      width: 100%;
+    }
+  }
+}
+
+#experience {
+  >ul {
+    li {
+      padding: calc(vars.$base-space * 2);
+      border-radius: vars.$border-radius;
+      border-top: 1px solid vars.$gray1;
+
+      &:last-of-type {
+        border-bottom: 1px solid vars.$gray1;
+      }
+
+      &:hover {
+        background-color: color.adjust(vars.$butter, $lightness: 12%);
+        padding: calc(vars.$base-space * 2) calc(vars.$base-space * 4);
+      }
+    }
+  }
+}
+
+footer {    
+    a {
+        display: inline-flex;
+        align-items: center;
+        color: vars.$white;
+        text-decoration: none;
+    }
+}
