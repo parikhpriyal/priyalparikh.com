@@ -22,7 +22,7 @@ $headers: (
 
 // Colors
 
-$base: #FFFDF7;
+$bg: #FFFDF7;
 $black: #000000;
 $gray1: #EFEFEF;
 $white: #FFFFFF;
@@ -37,7 +37,7 @@ $tomato: #FF5A3C;
 // $diff-background: #B7B7B7;
 
 $theme: (
-    'base': $base,
+    'bg': $bg,
     'black': $black,
     'gray1': $gray1,
     'white': $white,
