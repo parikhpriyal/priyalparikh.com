@@ -10,8 +10,10 @@
 
 #work {
   .card {
-    &:hover {
-      box-shadow: 0 0 10px vars.$gray1;
+    cursor: pointer;
+
+    &:hover {      
+      box-shadow: 0 0 15px vars.$gray2;
     }
 
     img {

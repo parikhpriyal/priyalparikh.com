@@ -2,6 +2,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Instrument+Serif:ital@0;1&display=swap');
 
 // GLOBAL VARIABLES
 
@@ -10,6 +11,7 @@ $base-size: 14px;
 $text-xl: 20px;
 $font-serif: 'Instrument Serif', serif;
 $font-sans-serif: 'Geist', sans-serif;
+$font-mono: 'Geist Mono', monospace;
 
 $headers: (
     'h1': clamp(48px, 7vw, 120px),

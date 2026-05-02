@@ -26,6 +26,7 @@ ul {
     background-color: rgba(vars.$white, 0.3);
     border-radius: vars.$rounded-radius;
     font-size: vars.$base-size;
+    font-family: vars.$font-mono;
 }
 
 .card {
@@ -42,6 +43,10 @@ ul {
 
 .serif {
     font-family: vars.$font-serif;    
+}
+
+.mono {
+    font-family: vars.$font-mono;
 }
 
 .text-md {font-size: vars.$base-size;}
@@ -117,45 +122,13 @@ hr {
 
 // UNIVERSAL SCREEN SIZE
 
-nav {
-    position: sticky;
-    top: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: calc(vars.$base-space * 2);
-    width: 100vw;
-    height: 60px;
-    padding: 0 calc(vars.$base-space * 4);    
-    background-color: rgba(vars.$bg, 0.85);
-    backdrop-filter: blur(10px);
-    z-index: 10;
-    border-bottom: 1px solid vars.$gray1;
-
-    >div {
-        display: flex;
-        align-items: center;
-        gap: vars.$base-space;
-        height: inherit;
-        
-        img {
-            width: auto;
-            height: 100%;
-            padding: vars.$base-space 0;
-        }
-    }
-
-
-    ul{
-        padding: vars.$base-space 0;
-        display: flex;
-        gap: calc(vars.$base-space * 2);
-        align-items: center;
-    }   
-}
-
 main {
     display: grid;
     gap: calc(vars.$base-space * 6);
-    padding: calc(vars.$base-space * 4) calc(vars.$base-space * 8);
+    // padding: calc(vars.$base-space * 4) calc(vars.$base-space * 8);
+    padding: 5vw;
+
+    img {
+        width: 100%;
+    }
 }
