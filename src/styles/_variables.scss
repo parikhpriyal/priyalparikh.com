@@ -2,6 +2,22 @@
 
 // Font Details
 
+@font-face {
+    font-family: 'Instrument Serif';
+    src: url('../../public/fonts/Instrument_Serif/InstrumentSerif-Italic.ttf'), 
+         url('../../public/fonts/Instrument_Serif/InstrumentSerif-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Geist';
+    src: url('../../public/fonts/Geist/Geist-VariableFont_wght.ttf');
+}
+
+@font-face {
+    font-family: 'Geist Mono';
+    src: url('../../public/fonts/Geist_Mono/GeistMono-VariableFont_wght.ttf');
+}
+
 $base-size: 14px;
 $text-xl: 20px;
 $font-serif: 'Instrument Serif', serif;
