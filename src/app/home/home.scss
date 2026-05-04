@@ -6,6 +6,10 @@
     display: flex;
     flex-direction: column;
     @extend .gap-2;
+
+    .grid-3{
+      grid-template-columns: repeat(auto-fit, minmax(32%, 1fr));
+    }
 }
 
 #work {  
