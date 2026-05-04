@@ -1,0 +1,62 @@
+@use 'variables' as vars;
+@use 'styles' as main;
+@use 'sass:color';
+
+#home {
+    display: flex;
+    flex-direction: column;
+    @extend .gap-2;
+}
+
+#work {  
+  .grid-2 {
+    grid-template-columns: repeat(auto-fit, minmax(48%, 1fr));
+  }
+  .card {
+    cursor: pointer;
+
+    &:hover {      
+      box-shadow: 0 0 15px vars.$gray2;
+    }
+
+    img {
+      padding: calc(vars.$base-space * 4);
+      width: 100%;
+    }
+  }
+}
+
+#about {
+  &.grid-2,
+  .grid-2 {
+    grid-template-columns: repeat(auto-fit, minmax(46%, 1fr));
+  }
+}
+
+#experience {
+  >ul {
+    li {
+      padding: calc(vars.$base-space * 2);
+      border-radius: vars.$border-radius;
+      border-top: 1px solid vars.$gray1;
+
+      &:last-of-type {
+        border-bottom: 1px solid vars.$gray1;
+      }
+
+      &:hover {
+        background-color: color.adjust(vars.$butter, $lightness: 12%);
+        padding: calc(vars.$base-space * 2) calc(vars.$base-space * 4);
+      }
+    }
+  }
+}
+
+footer {    
+    a {
+        display: inline-flex;
+        align-items: center;
+        color: vars.$white;
+        text-decoration: none;
+    }
+}
