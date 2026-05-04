@@ -49,9 +49,29 @@ ul {
     font-family: vars.$font-mono;
 }
 
+.font-symbol {
+    font-family: vars.$font-icons;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 16px;  /* Preferred icon size */
+    width: 16px;    
+    aspect-ratio: 1/1;
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+}
+
 .text-md {font-size: vars.$base-size;}
 
 .text-xl { font-size: vars.$text-xl; }
+
+a {
+    color: vars.$tomato;
+}
 
 .flex {
     display: flex;
@@ -122,6 +142,43 @@ hr {
 
 // UNIVERSAL SCREEN SIZE
 
+nav {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: calc(vars.$base-space * 2);
+    width: 100vw;
+    height: 60px;
+    padding: 0 5vw;
+    background-color: rgba(vars.$bg, 0.85);
+    backdrop-filter: blur(10px);
+    z-index: 10;
+    border-bottom: 1px solid vars.$gray1;
+
+    >div {
+        display: flex;
+        align-items: center;
+        gap: vars.$base-space;
+        height: inherit;
+        cursor: pointer;
+        
+        img {
+            width: auto;
+            height: 100%;
+            padding: vars.$base-space 0;
+        }
+    }
+
+    ul{
+        padding: vars.$base-space 0;
+        display: flex;
+        gap: calc(vars.$base-space * 2);
+        align-items: center;
+    }
+}
+
 main {
     display: grid;
     gap: calc(vars.$base-space * 6);
@@ -131,4 +188,14 @@ main {
     img {
         width: 100%;
     }
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 48%));
+  align-items: stretch;
+  
+  img {
+    width: 100%;
+  }
 }

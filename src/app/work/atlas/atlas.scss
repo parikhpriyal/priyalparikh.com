@@ -3,13 +3,3 @@
   min-width: 48px;
   max-width: 120px;
 }
-
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 48%));
-  align-items: stretch;
-  
-  img {
-    width: 100%;
-  }
-}
