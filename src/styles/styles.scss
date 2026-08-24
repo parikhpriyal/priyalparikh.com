@@ -32,11 +32,24 @@ ul {
 .card {
     display: flex;
     flex-direction: column;
-    gap: calc(vars.$base-size / 2);
+    gap: vars.$base-size;
     width: 100%;
-    padding: calc(vars.$base-space * 2);
+    padding: calc(vars.$base-space * 3);
     border-radius: vars.$border-radius;
     background-color: vars.$white;
+    border: 1px solid vars.$gray1;    
+}
+
+img {
+    width: auto;
+    height: 100%;       
+}
+
+.legend {
+    width: 14px;
+    height: 14px;
+    aspect-ratio: 1/1;
+    background-color: vars.$gray1;
 }
 
 // BASICS
@@ -74,7 +87,7 @@ a {
     color: vars.$tomato;
 }
 
-p {
+p, small {
     font-weight: 300;
     color: vars.$charcoal;
 }
@@ -102,6 +115,10 @@ p {
 
 .items-center {
     align-items: center;
+}
+
+.items-baseline {
+    align-items: baseline;
 }
 
 @for $i from 1 to vars.$columns {
@@ -134,11 +151,7 @@ p {
 
     .text-#{$name} {
         color: $color;
-    }
-
-    .border-#{$name} {
-        border: 2px solid $color;
-    }
+    }    
 }
 
 hr {

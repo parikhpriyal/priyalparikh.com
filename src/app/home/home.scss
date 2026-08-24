@@ -19,6 +19,12 @@
   .card {
     cursor: pointer;
 
+    .bg-bg-gray {
+        background-color: rgba(vars.$gray1, 0.2);
+        border-radius: vars.$border-radius;
+        padding: vars.$base-space;
+    }
+
     &:hover {      
       box-shadow: 0 0 15px vars.$gray2;
     }
@@ -35,13 +41,23 @@
   .grid-2 {
     grid-template-columns: repeat(auto-fit, minmax(46%, 1fr));
   }
+
+}
+
+.icons {  
+  padding: calc(vars.$base-space / 2);  
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: calc(vars.$border-radius / 2);
+  align-self: start;  
 }
 
 #experience {
   >ul {
     li {
       padding: calc(vars.$base-space * 2);
-      border-radius: vars.$border-radius;
       border-top: 1px solid vars.$gray1;
 
       &:last-of-type {
@@ -49,8 +65,13 @@
       }
 
       &:hover {
-        background-color: color.adjust(vars.$butter, $lightness: 12%);
+        background-color: vars.$white;
         padding: calc(vars.$base-space * 2) calc(vars.$base-space * 4);
+      }      
+
+      .icons {
+        height: 100%;
+        width: auto;
       }
     }
   }

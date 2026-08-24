@@ -2,23 +2,36 @@
   <!-- homepage -->            
   <section id="home">
       <h1>Turning complexity into clarity, one  <em class="serif text-tomato">interaction</em> at a time.</h1>
-      <p>I'm a Design Strategist with <em class="serif">ten years</em> of building tools people use every day. I work where strategy, systems, and craft overlap, and I run the kind of team meetings that designers and engineers actually want to attend.</p>                
+      <p>I'm a Design Strategist with <em class="serif">ten years</em> of building tools people use every day. I work where strategy, systems, and craft overlap, and I run the kind of team meetings that designers and engineers actually want to attend.</p>      
+      <hr />          
       <ul class="grid-4">
           <li>
               <h3>10 +</h3>
-              <p class="text-mono">Years</p>
+              <div class="flex items-center gap-1">
+                <div class="legend bg-sky"></div>
+                <small class="mono">Years Designing</small>
+              </div>
           </li>
           <li>
-              <h3>25 +</h3>
-              <p class="text-mono">Products Designed</p>
+              <h3>20 +</h3>
+              <div class="flex items-center gap-1">
+                <div class="legend bg-pink"></div>
+                <small class="mono">Products Designed</small>
+              </div>
           </li>
           <li>
-              <h3>7000 +</h3>
-              <p class="text-mono">Using My Systems</p>
+              <h3>3.5k +</h3>
+              <div class="flex items-center gap-1">
+                <div class="legend bg-purple"></div>
+                <small class="mono">Using My Systems</small>
+              </div>
           </li>
           <li>
               <h3>4</h3>
-              <p class="mono">Designers Mentored</p>
+              <div class="flex items-center gap-1">
+                <div class="legend bg-coral"></div>
+                <small class="mono">Designers Mentored</small>
+              </div>
           </li>                
       </ul>
   </section>
@@ -26,40 +39,49 @@
   <section id="work" class="grid-1">
       <h2>Work That <em class="serif text-tomato">Matters</em> .</h2>
       <div class="grid-2">
-          <div class="card bg-sky" routerLink="/eai">
+          <div class="card bg-black" routerLink="/eai">
             <div class="flex gap-1 items-center">
-              <span class="badge">2017 - 2026</span>
-              <p class="text-md">Sr. Designer</p>
+              <span class="badge bg-coral">2017 - 2026</span>
+              <p class="text-md mono text-white">Sr. Designer</p>
             </div>
-            <h4>EAI Technologies</h4>
-            <img src="/img/eai/cover.png" alt="Cover">
+            <h4 class="text-white">EAI Technologies</h4>
+            <small class="text-white">9 years, 13+ clients, 2.8k users</small>
+            <div class="bg-bg-gray">
+              <img src="/img/eai/cover.png" alt="Cover">
+            </div>
           </div>
-          <div class="card bg-coral" routerLink="sales">
+          <div class="card" routerLink="sales">
             <div class="flex gap-1 items-center">
-              <span class="badge">2024</span>
-              <p class="text-md">Lead Designer</p>
+              <span class="badge bg-sky">2024</span>
+              <p class="text-md mono">Lead Designer</p>
             </div>
             <h4>Sales Portal</h4>
-            <p>A portal to track and manage warehouse sales, end to end.</p>
-            <img src="/img/sales-port/sales.png" alt="Cover">
+            <small>A portal to track and manage warehouse sales, end to end.</small>
+            <div class="bg-bg-gray">
+              <img src="/img/sales-port/sales.png" alt="Cover">
+            </div>
           </div>
-          <div class="card bg-butter" routerLink="atlas">
+          <div class="card" routerLink="atlas">
             <div class="flex gap-1 items-center">
-              <span class="badge">2020</span>
-              <p class="text-md">Lead Designer</p>
+              <span class="badge bg-purple">2020</span>
+              <p class="text-md mono">Lead Designer</p>
             </div>
             <h4>TW Atlas</h4>
-            <p>A mapping tool that brings clarity to port terminal logistics.</p>
-            <img src="/img/tw-atlas/atlas.png" alt="Cover">
+            <small>A mapping tool that brings clarity to port terminal logistics.</small>
+            <div class="bg-bg-gray">
+              <img src="/img/tw-atlas/atlas.png" alt="Cover">
+            </div>
           </div>                    
-          <div class="card bg-purple" routerLink="imbrace">
+          <div class="card" routerLink="imbrace">
             <div class="flex gap-1 items-center">
-              <span class="badge">2017</span>
-              <p class="text-md">Thesis - IC</p>
+              <span class="badge bg-pink">2017</span>
+              <p class="text-md mono">Thesis - IC</p>
             </div>
             <h4>Imbrace</h4>
-            <p>Wearable that helps women manage back pain, without sacrificing style.</p>
-            <img src="/img/imbrace/cover.png" alt="Cover">
+            <small>Wearable that helps women manage back pain, without sacrificing style.</small>
+            <div class="bg-bg-gray">
+              <img src="/img/imbrace/cover.png" alt="Cover">
+            </div>
           </div>          
       </div>
   </section>
@@ -78,22 +100,29 @@
           </div>
       </div>
       <div class="grid-2 gap-4">
-        <span class="card border-pink"><h4>Interaction design & prototyping</h4>
+        <span class="card">
+          <div class="icons bg-mint"><span class="font-symbol">draw</span></div>
+          <h4>Interaction design <span class="serif">& prototyping</span></h4>
           <p class="text-md">Hand sketch → high-fidelity Figma → coded prototype. I prototype to explore and challenge ideas, not just to show them off.</p>
         </span>
-        <span class="card border-sky"><h4>Design systems</h4>
+        <span class="card">
+          <div class="icons bg-pink"><span class="font-symbol">shapes</span></div><h4>Design <span class="serif">systems</span></h4>
           <p class="text-md">To me, the design system isn't a deliverable — it's the foundation the entire product stands on. Built 8 full systems and contributed to 2 more.</p>
         </span>
-        <span class="card border-mint"><h4>Strategy & product thinking</h4>
+        <span class="card">
+          <div class="icons bg-butter"><span class="font-symbol">sunny</span></div><h4>Strategy <span class="serif">& product thinking</span></h4>
           <p class="text-md">The best design decisions aren't made in isolation. They're made with a clear understanding of where the product needs to go.</p>
         </span>
-        <span class="card border-butter"><h4>Research & discovery</h4>
+        <span class="card">
+          <div class="icons bg-sky"><span class="font-symbol">search</span></div><h4>Research <span class="serif">& discovery</span></h4>
           <p class="text-md">Before I design a single screen, I invest in understanding the people I'm designing for.</p>
         </span>
-        <span class="card border-purple"><h4>Cross-functional leadership</h4>
+        <span class="card">
+          <div class="icons bg-purple"><span class="font-symbol">group</span></div><h4>Cross-functional <span class="serif">leadership</span></h4>
           <p class="text-md">Over 8 years, I have brought designers, developers, and stakeholders together around a shared vision and helped move it forward.</p>
         </span>
-        <span class="card border-coral"><h4>Mentoring & hiring</h4>
+        <span class="card">
+          <div class="icons bg-coral"><span class="font-symbol">star</span></div><h4>Mentoring <span class="serif">& hiring</span></h4>
           <p class="text-md">Building a design team is as much a craft as design itself. I have hired and grown five designers across entry and mid levels.</p>
         </span>
       </div>                
@@ -102,51 +131,69 @@
   <section id="experience" class="grid-1 gap-4">
       <h2>My <em class="serif text-tomato">journey</em> so far.</h2>
       <ul>
-          <li class="grid-3 gap-2">
+          <li class="grid-3 gap-2">            
               <p class="text-md text-gray2">2026 - Present</p>
-              <div>
-                <p>Design and Product Strategist</p>
-                <p class="text-md text-gray2">Freelance</p>
+              <div class="flex gap-2">
+                <p class="icons serif bg-mint">F</p>
+                <div>
+                  <p>Design and Product Strategist</p>
+                  <p class="text-md text-gray2">Freelance</p>
+                </div>
               </div>
-              <p class="text-md text-gray2 justify-self-end">Mumbai, USA</p>
+              <p class="text-md text-gray2 justify-self-end">Mumbai, India</p>
           </li>
           <li class="grid-3 gap-2">
               <p class="text-md text-gray2">2017 - Present</p>
-              <div>
-                <p>UI/UX Innovator</p>
-                <p class="text-md text-gray2">EAI Technologies</p>
+              <div class="flex gap-2">
+                <p class="icons serif bg-pink">E</p>
+                <div>
+                  <p>UI/UX Innovator</p>
+                  <p class="text-md text-gray2">EAI Technologies</p>
+                </div>
               </div>
               <p class="text-md text-gray2 justify-self-end">Virginia, USA</p>
           </li>
           <li class="grid-3 gap-2">
               <p class="text-md text-gray2">Summer 2017</p>
-              <div>
-                <p>Designer and Developer</p>
-                <p class="text-md text-gray2">NYC Media Lab x Verizon</p>
+              <div class="flex gap-2">
+                <p class="icons serif bg-sky">N</p>
+                <div>
+                  <p>Designer and Developer</p>
+                  <p class="text-md text-gray2">NYC Media Lab x Verizon</p>
+                </div>
               </div>
               <p class="text-md text-gray2 justify-self-end">New York, USA</p>
           </li>
           <li class="grid-3 gap-2">
               <p class="text-md text-gray2">Summer 2016</p>
-              <div>
-                <p>Engineering Fellow</p>
-                <p class="text-md text-gray2">Open Style Lab, MIT IDC</p>
+              <div class="flex gap-2">
+                <p class="icons serif bg-butter">O</p>
+                <div>
+                  <p>Engineering Fellow</p>
+                  <p class="text-md text-gray2">Open Style Lab, MIT IDC</p>
+                </div>
               </div>
               <p class="text-md text-gray2 justify-self-end">Boston, USA</p>
           </li>
           <li class="grid-3 gap-2">
               <p class="text-md text-gray2">Summer 2016</p>
-              <div>
-                <p>Transmedia Intern</p>
-                <p class="text-md text-gray2">Songha & Co</p>
+              <div class="flex gap-2">
+                <p class="icons serif bg-purple">S</p>
+                <div>
+                  <p>Transmedia Intern</p>
+                  <p class="text-md text-gray2">Songha & Co</p>
+                </div>
               </div>
               <p class="text-md text-gray2 justify-self-end">New York, USA</p>
           </li>
           <li class="grid-3 gap-2">
               <p class="text-md text-gray2">2013-2014</p>
-              <div>
-                <p>Risk Analyst</p>
-                <p class="text-md text-gray2">Ernst & Young</p>
+              <div class="flex gap-2">
+                <p class="icons serif bg-coral">E</p>
+                <div>
+                  <p>Risk Analyst</p>
+                  <p class="text-md text-gray2">Ernst & Young</p>
+                </div>
               </div>
               <p class="text-md text-gray2 justify-self-end">Mumbai, India</p>
           </li>
