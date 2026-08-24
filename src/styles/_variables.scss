@@ -36,10 +36,11 @@ $headers: (
 
 // Colors
 
-$bg: #FFFDF7;
+$bg: #F6F5F2;
 $black: #000000;
 $gray1: #d3d2d2;
 $gray2: #7d7d7d;
+$charcoal: #3a3e45;
 $white: #FFFFFF;
 $mint: #B6F0D2;
 $pink: #fac3de;
@@ -47,7 +48,7 @@ $butter: #ffe6a2;
 $sky: #a4d7fc;
 $purple: #cac3ff;
 $coral: #ffcec5;
-$tomato: #FF5A3C;
+$tomato: #e14a2b;
 // $links: rgba(255, 20, 67, 1);
 // $diff-background: #B7B7B7;
 
@@ -56,6 +57,7 @@ $theme: (
     'black': $black,
     'gray1': $gray1,
     'gray2': $gray2,
+    'charcoal': $charcoal,
     'white': $white,
     'mint': $mint,
     'pink': $pink,

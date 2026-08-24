@@ -42,7 +42,8 @@ ul {
 // BASICS
 
 .serif {
-    font-family: vars.$font-serif;    
+    font-family: vars.$font-serif;
+    font-weight: 400;
 }
 
 .mono {
@@ -71,6 +72,11 @@ ul {
 
 a {
     color: vars.$tomato;
+}
+
+p {
+    font-weight: 300;
+    color: vars.$charcoal;
 }
 
 .flex {
@@ -116,7 +122,8 @@ a {
     #{$type},
     .#{$type} {
         font-size: $size;
-        line-height: 1.1;        
+        line-height: 1.1;  
+        font-weight: 600;      
     }
 }
 
