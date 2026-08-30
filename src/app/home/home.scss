@@ -7,6 +7,10 @@
     flex-direction: column;
     @extend .gap-2;
 
+    .grid-4 {
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+
     .grid-3{
       grid-template-columns: repeat(auto-fit, minmax(32%, 1fr));
     }
@@ -57,6 +61,8 @@
 #experience {
   >ul {
     li {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       padding: calc(vars.$base-space * 2);
       border-top: 1px solid vars.$gray1;
 
@@ -71,6 +77,7 @@
 
       .icons {
         height: 100%;
+        max-height: 50px;
         width: auto;
       }
     }
@@ -78,10 +85,7 @@
 }
 
 footer {    
-    a {
-        display: inline-flex;
-        align-items: center;
-        color: vars.$white;
-        text-decoration: none;
-    }
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: calc(vars.$base-space * 2);
 }

@@ -121,6 +121,10 @@ p, small {
     align-items: baseline;
 }
 
+.content-start {
+    align-content: start;
+}
+
 @for $i from 1 to vars.$columns {
     .grid-#{$i} {
         display: grid;
