@@ -8,16 +8,12 @@ section {
 
 #home {
     display: flex;
-    flex-direction: column;    
+    flex-direction: column;
 
     img {      
       width: 35%;
       height: auto;
-      float: right;
-      // background-image: linear-gradient(45deg,rgba(182, 240, 210, 1) 0%, rgba(164, 215, 252, 1) 33%, rgba(255, 206, 197, 1) 66%, rgba(202, 195, 255, 1) 100%);      
-      shape-outside: url('../../../public/img/Priyal-Parikh.svg');
-      shape-image-threshold: 0.5;
-      shape-margin: 1.5em;
+      float: right;      
     }
 
     .grid-4 {
