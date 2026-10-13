@@ -30,15 +30,13 @@ section {
     grid-template-columns: repeat(auto-fit, minmax(48%, 1fr));
   }  
 
-  .card {    
-    --angle: 0deg;
+  .card {
     cursor: pointer;
     border: 10px solid transparent;
 
     &:hover {
       border-image-slice: 1;
-      border-image-source: linear-gradient(var(--angle),rgba(182, 240, 210, 1), rgba(164, 215, 252, 1), rgba(255, 206, 197, 1), rgba(202, 195, 255, 1));
-      animation: rotate 10s linear infinite;
+      border-image-source: linear-gradient(45deg,rgba(182, 240, 210, 1), rgba(164, 215, 252, 1), rgba(255, 206, 197, 1), rgba(202, 195, 255, 1));      
     }
 
     .bg-bg-gray {
@@ -52,18 +50,6 @@ section {
       width: 100%;
     }
   }
-}
-
-@keyframes rotate {
-  to {
-    --angle: 360deg;
-  }
-}
-
-@property --angle {
-  syntax: '<angle>';
-  initial-value: 0deg;
-  inherits: false;
 }
 
 #about {
