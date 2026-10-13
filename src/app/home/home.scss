@@ -8,12 +8,15 @@ section {
 
 #home {
     display: flex;
-    flex-direction: column;
+    flex-direction: column;    
 
     img {      
       width: 35%;
       height: auto;
       float: right;      
+      shape-outside: url('../../../public/img/Priyal-Parikh.svg');
+      shape-image-threshold: 0.5;
+      shape-margin: 1.5em;
     }
 
     .grid-4 {
@@ -30,14 +33,16 @@ section {
     grid-template-columns: repeat(auto-fit, minmax(48%, 1fr));
   }  
 
-  .card {
+  .card {    
+    --angle: 0deg;
     cursor: pointer;
-    border: 10px solid transparent;
+    border: 5px solid transparent;
 
     &:hover {
       border-color: vars.$tomato;
       // border-image-slice: 1;
-      // border-image-source: linear-gradient(45deg,rgba(182, 240, 210, 1), rgba(164, 215, 252, 1), rgba(255, 206, 197, 1), rgba(202, 195, 255, 1));      
+      // border-image-source: linear-gradient(var(--angle),rgba(182, 240, 210, 1), rgba(164, 215, 252, 1), rgba(255, 206, 197, 1), rgba(202, 195, 255, 1));
+      // animation: rotate 10s linear infinite;
     }
 
     .bg-bg-gray {
@@ -51,6 +56,18 @@ section {
       width: 100%;
     }
   }
+}
+
+@keyframes rotate {
+  to {
+    --angle: 360deg;
+  }
+}
+
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
 }
 
 #about {
