@@ -39,10 +39,7 @@ section {
     border: 5px solid transparent;
 
     &:hover {
-      border-color: vars.$tomato;
-      // border-image-slice: 1;
-      // border-image-source: linear-gradient(var(--angle),rgba(182, 240, 210, 1), rgba(164, 215, 252, 1), rgba(255, 206, 197, 1), rgba(202, 195, 255, 1));
-      // animation: rotate 10s linear infinite;
+      border-color: vars.$tomato;      
     }
 
     .bg-bg-gray {
@@ -56,18 +53,6 @@ section {
       width: 100%;
     }
   }
-}
-
-@keyframes rotate {
-  to {
-    --angle: 360deg;
-  }
-}
-
-@property --angle {
-  syntax: '<angle>';
-  initial-value: 0deg;
-  inherits: false;
 }
 
 #about {
