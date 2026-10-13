@@ -1,7 +1,23 @@
+@use 'variables' as vars;
+
+img {
+  width: 100%;
+  height: auto;
+}
+
 #logo {
   width: 7vw;
   min-width: 48px;
   max-width: 120px;
+}
+
+.video {
+  width: 75vw;
+  height: auto;
+  margin: auto;
+  padding: vars.$base-space;
+  outline: 5px solid black;
+  border-radius: vars.$border-radius;
 }
 
 video {  

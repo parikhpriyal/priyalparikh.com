@@ -2,10 +2,23 @@
 @use 'styles' as main;
 @use 'sass:color';
 
+section {
+  padding: 2vw 5vw;
+}
+
 #home {
     display: flex;
-    flex-direction: column;
-    @extend .gap-2;
+    flex-direction: column;    
+
+    img {      
+      width: 35%;
+      height: auto;
+      float: right;
+      // background-image: linear-gradient(45deg,rgba(182, 240, 210, 1) 0%, rgba(164, 215, 252, 1) 33%, rgba(255, 206, 197, 1) 66%, rgba(202, 195, 255, 1) 100%);      
+      shape-outside: url('../../../public/img/Priyal-Parikh.svg');
+      shape-image-threshold: 0.5;
+      shape-margin: 1.5em;
+    }
 
     .grid-4 {
       grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
@@ -19,18 +32,23 @@
 #work {  
   .grid-2 {
     grid-template-columns: repeat(auto-fit, minmax(48%, 1fr));
-  }
-  .card {
-    cursor: pointer;
+  }  
 
-    .bg-bg-gray {
-        background-color: rgba(vars.$gray1, 0.2);
-        border-radius: vars.$border-radius;
-        padding: vars.$base-space;
+  .card {    
+    --angle: 0deg;
+    cursor: pointer;
+    border: 10px solid transparent;
+
+    &:hover {
+      border-image-slice: 1;
+      border-image-source: linear-gradient(var(--angle),rgba(182, 240, 210, 1), rgba(164, 215, 252, 1), rgba(255, 206, 197, 1), rgba(202, 195, 255, 1));
+      animation: rotate 10s linear infinite;
     }
 
-    &:hover {      
-      box-shadow: 0 0 15px vars.$gray2;
+    .bg-bg-gray {
+      background-color: rgba(vars.$gray1, 0.2);
+      border-radius: vars.$border-radius;
+      padding: vars.$base-space;      
     }
 
     img {
@@ -38,6 +56,18 @@
       width: 100%;
     }
   }
+}
+
+@keyframes rotate {
+  to {
+    --angle: 360deg;
+  }
+}
+
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
 }
 
 #about {
@@ -56,6 +86,12 @@
   justify-content: center;
   border-radius: calc(vars.$border-radius / 2);
   align-self: start;  
+}
+
+#process {
+  .grid-3 {  
+    grid-template-columns: repeat(auto-fit, minmax(31%, 1fr));  
+  }
 }
 
 #experience {

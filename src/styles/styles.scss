@@ -41,8 +41,8 @@ ul {
 }
 
 img {
-    width: auto;
-    height: 100%;       
+    width: 100%;
+    height: auto;       
 }
 
 .legend {
@@ -56,7 +56,7 @@ img {
 
 .serif {
     font-family: vars.$font-serif;
-    font-weight: 400;
+    font-weight: 600;
 }
 
 .mono {
@@ -82,6 +82,10 @@ img {
 .text-md {font-size: vars.$base-size;}
 
 .text-xl { font-size: vars.$text-xl; }
+
+.text-center {
+    text-align: center;
+}
 
 a {
     color: vars.$tomato;
@@ -113,6 +117,10 @@ p, small {
     justify-self: end;
 }
 
+.items-end {
+    align-items: flex-end;
+}
+
 .items-center {
     align-items: center;
 }
@@ -139,12 +147,36 @@ p, small {
     }
 }
 
+@each $prop, $abbrev in (margin: m, padding: p) {
+  @each $size, $length in vars.$spacers {
+    .#{$abbrev}-#{$size} {
+      #{$prop}: $length !important;
+    }
+    .#{$abbrev}t-#{$size},
+    .#{$abbrev}y-#{$size} {
+      #{$prop}-top: $length !important;
+    }
+    .#{$abbrev}r-#{$size},
+    .#{$abbrev}x-#{$size} {
+      #{$prop}-right: $length !important;
+    }
+    .#{$abbrev}b-#{$size},
+    .#{$abbrev}y-#{$size} {
+      #{$prop}-bottom: $length !important;
+    }
+    .#{$abbrev}l-#{$size},
+    .#{$abbrev}x-#{$size} {
+      #{$prop}-left: $length !important;
+    }
+  }
+}
+
 @each $type, $size in vars.$headers {
     #{$type},
     .#{$type} {
         font-size: $size;
         line-height: 1.1;  
-        font-weight: 600;      
+        font-weight: normal;
     }
 }
 
@@ -156,21 +188,25 @@ p, small {
     .text-#{$name} {
         color: $color;
     }    
+
+    .border-#{$name} {
+        border: 2px solid $color;
+    }
 }
 
 hr {
     display: block;
     border: 0;
-    border-top: 1px solid vars.$gray1;
+    border-top: 1px solid vars.$gray1;    
 }
 
 // UNIVERSAL SCREEN SIZE
 
 main {
     display: grid;
-    gap: calc(vars.$base-space * 6);
+    gap: calc(vars.$base-space * 3);
     // padding: calc(vars.$base-space * 4) calc(vars.$base-space * 8);
-    padding: 5vw;
+    // padding: 2vw 5vw;
 
     img {
         width: 100%;
@@ -185,4 +221,26 @@ main {
   img {
     width: 100%;
   }
+}
+
+section {
+  padding: 2vw 5vw;
+
+  &.design {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(48%, 1fr));
+    gap: vars.$base-space * 2;
+    align-items: start;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns:  repeat(auto-fit, minmax(30%, 1fr));
+    gap: vars.$base-space * 2;
+    align-items: start;
+
+    >div {
+        grid-column: span 2;
+    }
+    }
 }

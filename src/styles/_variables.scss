@@ -1,3 +1,4 @@
+@use 'sass:map';
 // GLOBAL VARIABLES
 
 // Font Details
@@ -19,15 +20,15 @@
 }
 
 $base-size: 14px;
-$text-xl: 20px;
+$text-xl: 18px;
 $font-serif: 'Instrument Serif', serif;
 $font-sans-serif: 'Geist', sans-serif;
 $font-mono: 'Geist Mono', monospace;
 $font-icons: 'Material Symbols Outlined';
 
 $headers: (
-    'h1': clamp(48px, 7vw, 120px),
-    'h2': clamp(38px, 6vw, 76px),
+    'h1': clamp(48px, 7vw, 96px),
+    'h2': clamp(36px, 6vw, 64px),
     'h3': clamp(20px, 5vw, 48px),
     'h4': 18px,
     'h5': 16px,
@@ -73,6 +74,28 @@ $theme: (
 $base-space: 12px;
 
 $gaps: 5;
+
+$spacer: $base-space !default;
+$spacers: () !default;
+$spacers: map.merge(
+  (
+    0: 0,
+    1: (
+      $spacer,
+    ),
+    2: (
+      $spacer * 1.5,
+    ),
+    3: $spacer * 2,
+    4: (
+      $spacer * 2.5,
+    ),
+    5: (
+      $spacer * 3,
+    ),
+  ),
+  $spacers
+);
 
 // Grid Sizes
 
