@@ -14,11 +14,14 @@
 
     .grid-4 {
       grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    }
+    }    
+}
 
-    .grid-3{
-      grid-template-columns: repeat(auto-fit, minmax(32%, 1fr));
-    }
+#home,
+#process {
+  .grid-3{
+    grid-template-columns: repeat(auto-fit, minmax(32%, 1fr));
+  }
 }
 
 #work {  
@@ -66,23 +69,13 @@
   align-self: start;  
 }
 
-#process {
-  .grid-3 {  
-    grid-template-columns: repeat(auto-fit, minmax(31%, 1fr));  
-  }
-}
-
 #experience {
   >ul {
     li {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       padding: calc(vars.$base-space * 2);
-      border-top: 1px solid vars.$gray1;
-
-      &:last-of-type {
-        border-bottom: 1px solid vars.$gray1;
-      }
+      border-top: 1px solid vars.$gray1;      
 
       &:hover {
         background-color: vars.$white;
