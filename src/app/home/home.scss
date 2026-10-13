@@ -35,8 +35,9 @@ section {
     border: 10px solid transparent;
 
     &:hover {
-      border-image-slice: 1;
-      border-image-source: linear-gradient(45deg,rgba(182, 240, 210, 1), rgba(164, 215, 252, 1), rgba(255, 206, 197, 1), rgba(202, 195, 255, 1));      
+      border-color: vars.$tomato;
+      // border-image-slice: 1;
+      // border-image-source: linear-gradient(45deg,rgba(182, 240, 210, 1), rgba(164, 215, 252, 1), rgba(255, 206, 197, 1), rgba(202, 195, 255, 1));      
     }
 
     .bg-bg-gray {
